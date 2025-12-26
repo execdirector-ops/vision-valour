@@ -1,0 +1,492 @@
+@import 'react-quill/dist/quill.snow.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.zeffy-embed-container {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.zeffy-embed-container iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 500px !important;
+  border: none;
+  border-radius: 8px;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: 1 !important;
+}
+
+#zeffy-newsletter-embed iframe {
+  position: static !important;
+}
+
+.ql-editor {
+  min-height: 300px;
+  font-size: 16px;
+  background: white;
+  color: #1f2937;
+}
+
+.ql-editor:focus {
+  outline: none;
+}
+
+.ql-container {
+  font-family: inherit;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.ql-toolbar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: #f9fafb;
+  border-color: #d1d5db !important;
+}
+
+.ql-snow .ql-stroke {
+  stroke: #4b5563;
+}
+
+.ql-snow .ql-fill {
+  fill: #4b5563;
+}
+
+.ql-snow .ql-picker-label {
+  color: #4b5563;
+}
+
+.ql-editor p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.ql-editor p:last-child {
+  margin-bottom: 0;
+}
+
+.ql-editor h1 {
+  font-size: 2.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.ql-editor h2 {
+  font-size: 1.875rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.875rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.ql-editor h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.ql-editor h1:first-child,
+.ql-editor h2:first-child,
+.ql-editor h3:first-child {
+  margin-top: 0;
+}
+
+.ql-editor ul,
+.ql-editor ol {
+  margin-left: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.ql-editor ul li,
+.ql-editor ol li {
+  margin-bottom: 0.5rem;
+}
+
+.ql-editor ul li:last-child,
+.ql-editor ol li:last-child {
+  margin-bottom: 0;
+}
+
+.ql-editor blockquote {
+  border-left: 4px solid #991b1b;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 1.5rem 0;
+  color: #4b5563;
+  font-style: italic;
+}
+
+.ql-editor pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.ql-editor strong {
+  font-weight: 700;
+}
+
+.ql-editor em {
+  font-style: italic;
+}
+
+.content-display img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.content-display .uploaded-image {
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.content-display .img-small {
+  max-width: 200px;
+}
+
+.content-display .img-medium {
+  max-width: 400px;
+}
+
+.content-display .img-large {
+  max-width: 600px;
+}
+
+.content-display .img-full {
+  max-width: 100%;
+  width: 100%;
+}
+
+.content-display .img-border {
+  border: 3px solid #991b1b;
+  padding: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-display .float-left {
+  float: left;
+  margin: 8px 20px 16px 0;
+  clear: left;
+}
+
+.content-display .float-right {
+  float: right;
+  margin: 8px 0 16px 20px;
+  clear: right;
+}
+
+.content-display .center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-display .image-figure {
+  margin: 16px 0;
+  display: inline-block;
+}
+
+.content-display .image-figure.float-left {
+  float: left;
+  margin: 8px 20px 16px 0;
+  clear: left;
+}
+
+.content-display .image-figure.float-right {
+  float: right;
+  margin: 8px 0 16px 20px;
+  clear: right;
+}
+
+.content-display .image-figure.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+.content-display .image-caption {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+  padding: 0 8px;
+}
+
+.editable-image {
+  cursor: pointer;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.editable-image:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 0 3px rgba(153, 27, 27, 0.3);
+}
+
+.content-display::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ql-editor .uploaded-image {
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.ql-editor .img-small {
+  max-width: 200px;
+}
+
+.ql-editor .img-medium {
+  max-width: 400px;
+}
+
+.ql-editor .img-large {
+  max-width: 600px;
+}
+
+.ql-editor .img-full {
+  max-width: 100%;
+  width: 100%;
+}
+
+.ql-editor .img-border {
+  border: 3px solid #991b1b;
+  padding: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ql-editor .float-left {
+  float: left;
+  margin: 8px 20px 16px 0;
+  clear: left;
+}
+
+.ql-editor .float-right {
+  float: right;
+  margin: 8px 0 16px 20px;
+  clear: right;
+}
+
+.ql-editor .center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ql-editor .image-figure {
+  margin: 16px 0;
+  display: inline-block;
+}
+
+.ql-editor .image-figure.float-left {
+  float: left;
+  margin: 8px 20px 16px 0;
+  clear: left;
+}
+
+.ql-editor .image-figure.float-right {
+  float: right;
+  margin: 8px 0 16px 20px;
+  clear: right;
+}
+
+.ql-editor .image-figure.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+.ql-editor .image-caption {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+  padding: 0 8px;
+}
+
+.content-display {
+  line-height: 1.8;
+}
+
+.content-display p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.content-display p:last-child {
+  margin-bottom: 0;
+}
+
+.content-display p:empty {
+  display: none;
+  margin: 0;
+}
+
+.content-display p br:only-child {
+  display: none;
+}
+
+.content-display strong {
+  font-weight: 700;
+}
+
+.content-display em {
+  font-style: italic;
+}
+
+.content-display a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.content-display a:hover {
+  color: #991b1b;
+}
+
+.content-display h1 {
+  font-size: 2.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.content-display h2 {
+  font-size: 1.875rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.875rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.content-display h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.content-display h1:first-child,
+.content-display h2:first-child,
+.content-display h3:first-child {
+  margin-top: 0;
+}
+
+.content-display ul,
+.content-display ol {
+  margin-left: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.content-display ul li,
+.content-display ol li {
+  margin-bottom: 0.5rem;
+}
+
+.content-display ul li:last-child,
+.content-display ol li:last-child {
+  margin-bottom: 0;
+}
+
+.content-display blockquote {
+  border-left: 4px solid #991b1b;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 1.5rem 0;
+  color: #4b5563;
+  font-style: italic;
+}
+
+.content-display code {
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.875em;
+}
+
+.content-display pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.content-display pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.ql-editor img {
+  cursor: pointer;
+  max-width: 100% !important;
+  height: auto !important;
+  display: inline-block;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.ql-editor img:hover {
+  opacity: 0.9 !important;
+  outline: 2px solid rgba(153, 27, 27, 0.5);
+}
+
+.ql-editor figure {
+  margin: 16px 0;
+  display: block;
+}
+
+.ql-editor figcaption {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.ql-editor img[style*="float: right"] {
+  margin-left: 1rem;
+}
+
+.ql-editor img[style*="float: left"] {
+  margin-right: 1rem;
+}
+
+.ql-editor img[style*="display: block"] {
+  margin-left: auto;
+  margin-right: auto;
+}

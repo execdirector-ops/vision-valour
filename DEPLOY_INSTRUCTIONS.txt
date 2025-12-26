@@ -1,0 +1,30 @@
+DEPLOYMENT INSTRUCTIONS FOR NETLIFY
+====================================
+
+The project has been built successfully. The 'dist' folder contains your website files.
+
+TO DEPLOY TO NETLIFY:
+
+Option 1 - Netlify Drop (Easiest):
+1. Go to: https://app.netlify.com/drop
+2. Open your terminal and run: open dist
+3. Drag the entire contents of the dist folder to the Netlify Drop page
+4. Netlify will deploy your site immediately
+
+Option 2 - Manual Upload:
+1. Download this entire project
+2. Find the 'dist' folder on your computer
+3. Go to https://app.netlify.com/drop
+4. Drag the dist folder contents to deploy
+
+Option 3 - Netlify Dashboard:
+1. Sign up/login at netlify.com
+2. Click "Add new site" → "Deploy manually"
+3. Drag the dist folder contents
+
+The dist folder contains:
+- index.html (main file)
+- assets/ folder (CSS and JavaScript)
+- All your images and static files
+
+Your site will be live in seconds after upload!
